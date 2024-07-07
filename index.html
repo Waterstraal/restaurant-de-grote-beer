@@ -5,6 +5,59 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Restaurant de Grote Beer</title>
     <style>
+        @import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600");
+
+        * {
+            box-sizing: border-box;
+        }
+
+        @keyframes pop-word {
+            to {
+                transform: rotateX(0);
+            }
+        }
+
+        @keyframes show {
+            to {
+                opacity: 1;
+            }
+        }
+
+        h1 {
+            text-align: center;
+            color: #07249a;
+            font-family: "Playfair Display", Vidaloka, serif;
+            font-size: 8rem;
+
+            line-height: 0.85;
+            perspective: 500px;
+        }
+
+        .word {
+            display: block;
+
+            animation: show 0.01s forwards, pop-word 1.5s forwards;
+            animation-timing-function: cubic-bezier(0.14, 1.23, 0.33, 1.16);
+            opacity: 0;
+
+            transform: rotateX(120deg);
+            transform-origin: 50% 100%;
+        }
+
+        .word:nth-of-type(2) {
+            padding: 0 2rem;
+
+            animation-delay: 1.5s;
+
+            color: #07249a;
+        }
+
+        @media screen and (max-width: 600px) {
+            h1 {
+                font-size: 5rem;
+            }
+        }
+
         .rotate-in-center {
             animation: rotate-in-center 1.2s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
         }
@@ -21,14 +74,14 @@
         }
 
         body {
-
             background-color: #fbeccd;
             margin: 0;
-            padding: 0;
+            padding: 8px;
         }
         .logo, .menu {
             margin: 0 auto;
             max-width: 500px;
+            width: 100%;
             height: auto;
             display: block;
         }
@@ -36,14 +89,6 @@
         .menu {
             border: 5px solid #000;
             margin-bottom: 8px;
-        }
-
-        h1 {
-            font: 400 1em/1.2 'Open Sans', sans-serif;
-            text-align: center;
-            font-size: 4em;
-            color: #791d05;
-            margin: 0;
         }
 
         p {
@@ -56,7 +101,10 @@
 <body>
 <div>
     <img src="logo.png" alt="Logo" class="logo rotate-in-center">
-    <h1>Restaurant de Grote Beer</h1>
+    <h1>
+        <span class="word">Restaurant</span>
+        <span class="word">De Grote Beer</span>
+    </h1>
     <p>
         Dit restaurant is gelegen in de slaapkamer van Yara. Het is een gezellig restaurant waar je lekker kan eten.
     </p>
