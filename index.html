@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Logo Display</title>
+    <style>
+
+        .rotate-in-center {
+            animation: rotate-in-center 1.2s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+        }
+
+        @keyframes rotate-in-center {
+            0% {
+                transform: rotate(-360deg);
+                opacity: 0;
+            }
+            100% {
+                transform: rotate(0);
+                opacity: 1;
+            }
+        }
+
+
+        body {
+
+            background-color: #fbeccd;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .logo {
+            margin: 0 auto;
+            max-width: 500px;
+            height: auto;
+            display: block;
+        }
+
+        h1 {
+            font: 400 1em/1.2 'Open Sans', sans-serif;
+            text-align: center;
+            font-size: 4em;
+            color: #791d05;
+            margin: 0;
+        }
+
+        p {
+            color: #791d05;
+            font: 400 1em/1.1 'Open Sans', sans-serif;
+        }
+    </style>
+</head>
+<body>
+<div>
+    <img src="logo.png" alt="Logo" class="logo rotate-in-center">
+    <h1>Restaurant de Grote Beer</h1>
+    <p>
+        Dit restaurant is gelegen inde slaapkamer van Yara. Het is een gezellig restaurant waar je lekker kan eten.
+    </p>
+</div>
+</body>
+</html>
