@@ -23,29 +23,6 @@
             }
         }
 
-        svg {
-            font-family: "Acme", sans-serif;
-            width: 100%; height: 100%;
-        }
-        svg text {
-            animation: stroke 4s alternate;
-            stroke-width: 2;
-            stroke: #551404;
-            font-size: 50px;
-        }
-        @keyframes stroke {
-            0%   {
-                fill: rgba(121,29,5,0); stroke: rgba(85,20,4,1);
-                stroke-dashoffset: 25%; stroke-dasharray: 0 50%; stroke-width: 2;
-            }
-            70%  {fill: rgba(121,29,5,0); stroke: rgba(85,20,4,1); }
-            80%  {fill: rgba(121,29,5,0); stroke: rgba(85,20,4,1); stroke-width: 3; }
-            100% {
-                fill: rgba(121,29,5,1); stroke: rgba(85,20,4,0);
-                stroke-dashoffset: -25%; stroke-dasharray: 50% 0; stroke-width: 0;
-            }
-        }
-
         body {
 
             background-color: #fbeccd;
@@ -87,13 +64,7 @@
 <body>
 <div>
     <img src="logo.png" alt="Logo" class="logo rotate-in-center">
-    <div class="wrapper">
-        <svg>
-            <text x="50%" y="50%" dy=".35em" text-anchor="middle">
-                Restaurant de Grote Beer
-            </text>
-        </svg>
-    </div>
+    <h1>Restaurant de Grote Beer</h1>
     <p>
         Dit restaurant is gelegen in de slaapkamer van Yara. Het is een gezellig restaurant waar je lekker kan eten.
     </p>
